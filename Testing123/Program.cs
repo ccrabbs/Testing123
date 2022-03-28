@@ -12,7 +12,9 @@ namespace Testing123
             //FindMissingValue();
             //GivenKey();
             //TwoIntegers();
-            DailyStockPrices();
+            //DailyStockPrices();
+            Deck();
+ 
         }
         //static  void TestIntergerArray()
         //{
@@ -43,17 +45,22 @@ namespace Testing123
         //    twoIntegers.Display(twoIntegers.NumberSum);
         //}
 
-        static void DailyStockPrices()
+        //static void DailyStockPrices()
+        //{
+        //    Console.WriteLine();
+        //    DailyStockPrices dailyStockPrices = new DailyStockPrices();
+        //    dailyStockPrices.AddStockPrice(30);
+        //    dailyStockPrices.AddStockPrice(20);
+        //    dailyStockPrices.AddStockPrice(41);
+        //    dailyStockPrices.AddStockPrice(50);
+        //    dailyStockPrices.AddStockPrice(10);
+        //    List<StockPrice> stockPrices = dailyStockPrices.FindBestPrice();
+        //    Console.WriteLine("Best Buy Price {0} Best Sale Price {1} for an improvement of {2}", stockPrices[0].Price, stockPrices[1].Price, stockPrices[0].DeltaPrice);
+        //}
+        static void Deck()
         {
-            Console.WriteLine();
-            DailyStockPrices dailyStockPrices = new DailyStockPrices();
-            dailyStockPrices.AddStockPrice(30);
-            dailyStockPrices.AddStockPrice(20);
-            dailyStockPrices.AddStockPrice(41);
-            dailyStockPrices.AddStockPrice(50);
-            dailyStockPrices.AddStockPrice(10);
-            List<StockPrice> stockPrices = dailyStockPrices.FindBestPrice();
-            Console.WriteLine("Best Buy Price {0} Best Sale Price {1} for an improvement of {2}", stockPrices[0].Price, stockPrices[1].Price, stockPrices[0].DeltaPrice);
+            Deck deck = new Deck();
+            deck.DisplayDeck();
         }
     }
 }
