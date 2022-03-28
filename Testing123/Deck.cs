@@ -11,7 +11,6 @@ namespace Testing123
 
         List<Card> Cards = new();
 
-
         static IEnumerable<string> Suits()
         {
             yield return "clubs";
