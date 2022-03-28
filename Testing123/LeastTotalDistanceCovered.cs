@@ -5,8 +5,8 @@ namespace Testing123
 {
     internal class LeastTotalDistanceCovered
     {
+        // Given N people on an MxM grid, find the point that requires the least total distance covered by all people to meet at that point.
         internal string[,] MyMatrix { get; }
-
         LeastTotalDistanceCovered()
         {
             MyMatrix = new string[5, 5];
