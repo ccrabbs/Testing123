@@ -6,10 +6,8 @@ namespace Testing123
 {
     internal class Deck
     {
-        // Program.cs
-        // The Main() method
 
-        List<Card> Cards = new();
+        internal List<Card> Cards = new();
 
         static IEnumerable<string> Suits()
         {
