@@ -1,9 +1,11 @@
-﻿namespace Testing123
+﻿using System.Collections.Generic;
+
+namespace Testing123
 {
     internal class VehicleInfo
     {
         internal int Id;
-        internal List< string> Addresses = new() { };
+        internal List<string> Addresses = new() { };
         internal VehicleInfo(int id, string address)
         {
             Id = id;
