@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Testing123
 {
@@ -13,8 +14,9 @@ namespace Testing123
             //GivenKey();
             //TwoIntegers();
             //DailyStockPrices();
-            Deck();
- 
+            //Deck();
+            Carvana();
+
         }
         //static  void TestIntergerArray()
         //{
@@ -57,10 +59,47 @@ namespace Testing123
         //    List<StockPrice> stockPrices = dailyStockPrices.FindBestPrice();
         //    Console.WriteLine("Best Buy Price {0} Best Sale Price {1} for an improvement of {2}", stockPrices[0].Price, stockPrices[1].Price, stockPrices[0].DeltaPrice);
         //}
-        static void Deck()
+        //static void Deck()
+        //{
+        //    Deck deck = new Deck();
+        //    deck.DisplayDeck();
+        //}
+        static void Carvana()
         {
-            Deck deck = new Deck();
-            deck.DisplayDeck();
+            Vehicles vehicles = new Vehicles();
+            vehicles.AddVehicle(1, "Tempo");
+            vehicles.AddVehicle(2, "Tacoma");
+            vehicles.AddVehicle(3, "Ranger");
+            VehicleAddresses vehicleAddresseses = new VehicleAddresses();
+            vehicleAddresseses.AddVehicleAddresses(1, "Ohio");
+            vehicleAddresseses.AddVehicleAddresses(1, "Virgia");
+            vehicleAddresseses.AddVehicleAddresses(3, "Michagan");
+            vehicleAddresseses.AddVehicleAddresses(1, "MaryLand");
+            vehicleAddresseses.AddVehicleAddresses(2, "West Virginia");
+            VehiclesInfo vehiclesInfo = new VehiclesInfo() { };
+
+            //var v =
+            //    from vehicle in vehicles
+            //    join VehicleAddress in vehicleAddresseses2 ;
+
+            //var query = from vehicle in vehicles
+            //            join vehicleAddress in vehicleAddresseses
+            //                 on vehicle.Id equals vehicleAddress.Id
+            //            select new
+            //            {
+            //                vehicleAddress.Id,
+            //                vehicleAddress.Address
+            //            };
+            foreach (var vehicle in vehicles)
+                foreach (var vehicleAddress in vehicleAddresseses)
+                    if (vehiclesInfo.VehiclesInfoList.ContainsKey(vehicle.id) == null)
+                    {
+                        vehiclesInfo.VehiclesInfoAdd(new VehicleInfo(vehicleAddress.id, vehicleAddress.address));
+                    }
+                    else
+                    {
+                        vehiclesInfo.VehiclesInfoAdd(vehicleAddress.id,AddAddress(vehicleAddress.address));
+                    }
         }
     }
 }
