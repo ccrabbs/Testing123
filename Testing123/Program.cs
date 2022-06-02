@@ -8,6 +8,11 @@ namespace Testing123
     {
         static void Main(string[] args)
         {
+            if (args is null)
+            {
+                throw new ArgumentNullException(nameof(args));
+            }
+
             Console.WriteLine("Hello World!");
             TestIntergerArray();
             FindMissingValue();
