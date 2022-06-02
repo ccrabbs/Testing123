@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Testing123
@@ -66,21 +65,21 @@ namespace Testing123
         //}
         static void Carvana()
         {
-            Vehicles vehicles = new Vehicles();
+            Vehicles vehicles = new();
             vehicles.AddVehicle(1, "Tempo");
             vehicles.AddVehicle(2, "Tacoma");
             vehicles.AddVehicle(3, "Ranger");
-            VehicleAddresses vehicleAddresseses = new VehicleAddresses();
+            VehicleAddresses vehicleAddresseses = new();
             vehicleAddresseses.AddVehicleAddresses(1, "Ohio");
             vehicleAddresseses.AddVehicleAddresses(1, "Virgia");
             vehicleAddresseses.AddVehicleAddresses(3, "Michagan");
             vehicleAddresseses.AddVehicleAddresses(1, "MaryLand");
             vehicleAddresseses.AddVehicleAddresses(2, "West Virginia");
-            VehiclesInfo vehiclesInfo = new VehiclesInfo() { };
+            VehiclesInfo vehiclesInfo = new() { };
 
             //var v =
             //    from vehicle in vehicles
-            //    join VehicleAddress in vehicleAddresseses2 ;
+            //    join VehicleAddress in vehicleAddresseses;
 
             //var query = from vehicle in vehicles
             //            join vehicleAddress in vehicleAddresseses
@@ -90,16 +89,17 @@ namespace Testing123
             //                vehicleAddress.Id,
             //                vehicleAddress.Address
             //            };
-            foreach (var vehicle in vehicles)
-                foreach (var vehicleAddress in vehicleAddresseses)
-                    if (vehiclesInfo.VehiclesInfoList.ContainsKey(vehicle.id) == null)
-                    {
-                        vehiclesInfo.VehiclesInfoAdd(new VehicleInfo(vehicleAddress.id, vehicleAddress.address));
-                    }
-                    else
-                    {
-                        vehiclesInfo.VehiclesInfoAdd(vehicleAddress.id,AddAddress(vehicleAddress.address));
-                    }
+
+            //foreach (var vehicle in vehicles)
+            //    foreach (var vehicleAddress in vehicleAddresseses)
+            //        if (vehiclesInfo.VehiclesInfoList.ContainsKey(vehicle.id) == null)
+            //        {
+            //            vehiclesInfo.VehiclesInfoAdd(new VehicleInfo(vehicleAddress.id, vehicleAddress.address));
+            //        }
+            //        else
+            //        {
+            //            vehiclesInfo.VehiclesInfoAdd(vehicleAddress.id,AddAddress(vehicleAddress.address));
+            //        }
         }
     }
 }
