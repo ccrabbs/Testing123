@@ -88,7 +88,7 @@ namespace Testing123
             //    from vehicle in vehicles
             //    join VehicleAddress in vehicleAddresseses;
 
-            var query = from vehicle in vehicles
+            var vehicleJoin = from vehicle in vehicles
                         join vehicleAddress in vehicleAddresseses
                              on vehicle.Id equals vehicleAddress.Id
                         select new
@@ -97,6 +97,9 @@ namespace Testing123
                             vehicleAddress.Address,
                             vehicle.Model
                         };
+
+            foreach (var vehicleAddress in vehicleJoin)
+                vehiclesInfo.VehiclesInfoAddressAdd(vehicleAddress.Id, vehicleAddress.Address);
 
             //foreach (var vehicle in vehicles)
             //    foreach (var vehicleAddress in vehicleAddresseses)

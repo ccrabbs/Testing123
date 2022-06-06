@@ -14,14 +14,19 @@ namespace Testing123
         }
         internal void VehiclesInfoAdd(int id, string address)
         {
-            List<string> AddressList = new();
-            AddressList.Add(address);
+            List<string> AddressList = new()
+            {
+                address
+            };
             VehiclesInfoList.Add( id, AddressList);
         }
+
         internal void VehiclesInfoAddressAdd(int id, string address)
         {
             if (!VehiclesInfoList.ContainsKey(id))
                 VehiclesInfoAdd(id,address);
+            else
+                VehiclesInfoList[id].Add(address);
         }
     }
 }
