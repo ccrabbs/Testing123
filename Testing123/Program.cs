@@ -21,7 +21,6 @@ namespace Testing123
             DailyStockPrices();
             Deck();
             Carvana();
-
         }
         static void TestIntergerArray()
         {
@@ -100,17 +99,6 @@ namespace Testing123
 
             foreach (var vehicleAddress in vehicleJoin)
                 vehiclesInfo.VehiclesInfoAddressAdd(vehicleAddress.Id, vehicleAddress.Address);
-
-            //foreach (var vehicle in vehicles)
-            //    foreach (var vehicleAddress in vehicleAddresseses)
-            //        if (vehiclesInfo.VehiclesInfoList.ContainsKey(vehicle.Id) == null)
-            //        {
-            //            vehiclesInfo.VehiclesInfoAdd(vehicleAddress.Id, vehicleAddress.Address);
-            //        }
-            //        else
-            //        {
-            //            vehiclesInfo.VehiclesInfoAdd(vehicleAddress.Id, vehicleAddress.Address);
-            //        }
         }
     }
 }
